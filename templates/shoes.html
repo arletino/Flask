@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+{% block title%}
+Страница Index
+{% endblock %}
+
+{% block content %}
+  <h1>Таблица товаров типа {{root_page.top_menu_list[2]}}</h1>
+    {% block table %}
+    <table border="1"  width="100%" cellpadding="5">
+      <tr>
+          {% for item in clothes[0] %}
+          <td>{{item}}</td>
+          {% endfor %}
+      </tr>
+          {% for item in clothes %}
+      <tr>
+          {% for point in item.values() %}
+            {% if point == 'lorem' %}
+              <td>{{lipsum(5)}}</td>
+            {%else%}
+               <td>{{point}}</td>
+            {% endif %}
+          {% endfor %}
+      </tr>
+      {% endfor %}
+  </table>
+
+    {% endblock %}
+{% endblock %}
