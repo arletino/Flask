@@ -10,7 +10,7 @@
     <title> some title </title>
     <title>{% block title %} {{root_page.title}} {% endblock %}</title>
   </head>
-  <body>
+  <body>0
     <div>
       <h1>{{root_page.title}}</h1>
       <ul>
@@ -23,12 +23,13 @@
       {% block content %}
       <div>
         {% block items_table%}
-        {% endblock%}
+        {% endblock %}
       </div>
       {% endblock%}
     </div>
     <div>
       <p>{{root_page.footer}}</p>
-    </div>
+
+    </div>                                         
   </body>
 </html>
