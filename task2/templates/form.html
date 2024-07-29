@@ -1,0 +1,6 @@
+{% extends 'base_template.html' %}
+    {% block content %}
+    <h1>Form page</h1>
+        {% import 'form_template.html' as frm %}
+            {{frm.form(fields)}}
+{% endblock %}

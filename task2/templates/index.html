@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+        <title>Document</title>
+        
+</head>
+<body>
+    <h1>Home page</h1>
+        {% import 'button_template.html' as btn %}
+        {{btn.button(url_entry, btn_name, msg)}}
+        {% for key, value in context.items() %}
+            <h1>{{key}} {{value}} </h1>
+        {% endfor %}
+
+    <table border="1" width="100%" cellpadding="5">
+        <tr>
+            {% for item in head %}
+            <td>{{item}}</td>
+            {% endfor %}
+        </tr>
+        {% for student in students %}
+        <tr>
+            {% for item in student.values() %}
+            <td>{{item}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base_template.html' %}
+    {% block content %}
+    <nav>
+        {% import 'button_template.html' as bnt %}
+            {{bnt.button(url_button, 'Кнопка', 'Нажми меня')}}
+            Содержимое страницы
+            {{ bnt.dialog_1('Внимание', 'Это тестовый диалог') }}
+        
+        </nav>
+    {% endblock %}
